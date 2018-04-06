@@ -1,10 +1,13 @@
 /*
-Written by FischiMc and SupaStefe
+Original Code written by by FischiMc and SupaStefe
 
-This sketch uses a 10x10 RGB LED-Matrix as a spectrum analyzer
+The original code used a 10x10 RGB LED-Matrix as a spectrum analyzer
 It uses a FTT Library to analyze an audio signal connected to the
 pin A7 of an Arduino nano. Everytime a column gets higher than
 10 pixels the color of each column changes.
+
+This code has been modified to work on 6 concentric WS2812b ring LEDs. 
+Also modified to raise the noise floor to prevent flickering.
 */
 
 #define LOG_OUT 0         //set output of FFT library to linear not logarithmical
